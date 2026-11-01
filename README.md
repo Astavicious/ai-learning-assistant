@@ -2,6 +2,8 @@
 
 Turn course PDFs into cited answers, revision notes, quizzes, and Anki flashcards. A standalone expansion of Bilal Amin's **2025 local prototype**.
 
+**[Live demo](https://ai-learning-assistant-one-sigma.vercel.app)** · **[Portfolio case study](https://bilal-amin-portfolio-eight.vercel.app/projects/ai-learning-assistant)**
+
 ![Live cited answer and PDF evidence](docs/screenshots/cited-answer-desktop.png)
 
 ## Status
