@@ -2,7 +2,7 @@
 
 Turn course PDFs into cited answers, revision notes, quizzes, and Anki flashcards. A standalone expansion of Bilal Amin's **2025 local prototype**.
 
-![Desktop study workspace](docs/screenshots/workspace-desktop.png)
+![Live cited answer and PDF evidence](docs/screenshots/cited-answer-desktop.png)
 
 ## Status
 

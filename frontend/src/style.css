@@ -7,7 +7,7 @@
   font-size: 16px;
   line-height: 1.55;
   --blue: #275fc6;
-  --muted: #6c7d93;
+  --muted: #5c6d83;
   --line: #e2e9f2;
   --navy: #172d4d;
 }
@@ -675,8 +675,10 @@ code {
 .answer {
   font-size: 15px;
   line-height: 1.75;
-  padding-bottom: 24px;
-  border-bottom: 1px solid var(--line);
+  padding: 20px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
   overflow-wrap: anywhere;
 }
 .answer-label {
