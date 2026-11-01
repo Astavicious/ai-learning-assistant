@@ -10,8 +10,18 @@ import httpx
 parser = argparse.ArgumentParser()
 parser.add_argument("--base", default="http://127.0.0.1:8000")
 parser.add_argument("--interval", type=float, default=22)
+parser.add_argument("--only", choices=["chat", "quiz", "flashcards", "summary"])
 args = parser.parse_args()
 with httpx.Client(base_url=args.base, timeout=120) as client:
+    for attempt in range(60):
+        try:
+            if client.get("/api/health").json().get("samples_ready"):
+                break
+        except (httpx.HTTPError, ValueError):
+            pass
+        time.sleep(2)
+    else:
+        raise SystemExit("The backend did not finish sample startup within two minutes.")
     session = client.post("/api/sessions").json()
     client.headers["Authorization"] = "Bearer " + session["access_token"]
     docs = client.get("/api/documents").json()
@@ -52,6 +62,8 @@ with httpx.Client(base_url=args.base, timeout=120) as client:
     failures = []
     try:
         for endpoint, body in tasks:
+            if args.only and body.get("kind", "chat") != args.only:
+                continue
             started = time.monotonic()
             response = client.post(endpoint, json=body)
             response.raise_for_status()

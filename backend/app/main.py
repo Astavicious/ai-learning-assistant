@@ -11,6 +11,7 @@ from fastapi import BackgroundTasks, FastAPI, Header, HTTPException, Request, Up
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 
+from .body_limit import BodyLimitMiddleware
 from .models import ChatRequest, Document, FlashcardSet, Job, Quiz, Session, StudyRequest, Summary
 from .service import Service
 from .store import Store, uid
@@ -74,6 +75,7 @@ def create_app(data_dir=None, load_embeddings=True):
 
     app = FastAPI(title="AI Learning Assistant", version="0.1.0", lifespan=lifespan)
     app.state.store, app.state.service = store, service
+    app.add_middleware(BodyLimitMiddleware)
     app.add_middleware(
         CORSMiddleware,
         allow_origins=os.getenv("ALLOWED_ORIGINS", "http://localhost:5173,http://127.0.0.1:5173").split(","),
