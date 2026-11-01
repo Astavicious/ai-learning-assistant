@@ -264,7 +264,14 @@ class Service:
                 "provider_not_configured|AI generation is not configured. The operator must add a Groq API key."
             )
         # Reserve conservatively before sending; retain reservation if provider usage is unknown.
-        evidence = [{k: s[k] for k in ("id", "text")} for s in sources]
+        aliases = {f"S{i + 1}": source["id"] for i, source in enumerate(sources)}
+        evidence = [
+            {"id": alias, "text": re.sub(r"\n{3,}", "\n\n", source["text"])}
+            for alias, source in zip(aliases, sources, strict=True)
+        ]
+        response_schema = schema.model_json_schema()
+        if sources:
+            response_schema["$defs"]["Evidence"]["properties"]["source_id"]["enum"] = list(aliases)
         messages = [
             {
                 "role": "system",
@@ -277,7 +284,7 @@ class Service:
         messages.append({"role": "user", "content": json.dumps({"task": instructions, "evidence": evidence})})
         # UTF-8 bytes bound the text token count conservatively; include schema and output.
         output_limit = 1400 if schema is AnswerDraft else 4096
-        reservation = len(json.dumps([messages, schema.model_json_schema()]).encode("utf-8")) + output_limit
+        reservation = len(json.dumps([messages, response_schema]).encode("utf-8")) + output_limit
         day = self.reserve(owner, reservation)
         started = time.monotonic()
         client = Groq(api_key=os.environ["GROQ_API_KEY"], timeout=45, max_retries=1)
@@ -293,7 +300,7 @@ class Service:
                     "json_schema": {
                         "name": schema.__name__,
                         "strict": True,
-                        "schema": schema.model_json_schema(),
+                        "schema": response_schema,
                     },
                 },
             )
@@ -304,7 +311,22 @@ class Service:
                     (actual - reservation, owner, day),
                 )
                 logger.info("generation seconds=%.3f tokens=%d", time.monotonic() - started, actual)
-            return schema.model_validate_json(response.choices[0].message.content).model_dump()
+            draft = schema.model_validate_json(response.choices[0].message.content).model_dump()
+
+            def resolve_aliases(value):
+                if isinstance(value, dict):
+                    if "source_id" in value:
+                        if value["source_id"] not in aliases:
+                            raise ValueError("invalid_citation|The model referenced an unknown source.")
+                        value["source_id"] = aliases[value["source_id"]]
+                    for child in value.values():
+                        resolve_aliases(child)
+                elif isinstance(value, list):
+                    for child in value:
+                        resolve_aliases(child)
+
+            resolve_aliases(draft)
+            return draft
         except APIStatusError as exc:
             logger.warning("provider_error status=%d", exc.status_code)
             if exc.status_code in (401, 429):
