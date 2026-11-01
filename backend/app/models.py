@@ -54,16 +54,28 @@ class Summary(StrictModel):
     incomplete: bool
 
 
+class OptionsDraft(StrictModel):
+    a: str
+    b: str
+    c: str
+    d: str
+
+
 class QuestionDraft(StrictModel):
     question: str
-    options: list[str] = Field(min_length=4, max_length=4)
+    options: OptionsDraft
     correct_index: Literal[0, 1, 2, 3]
     explanation: str
     citations: list[Evidence] = Field(min_length=1)
 
 
 class QuizDraft(StrictModel):
-    questions: list[QuestionDraft] = Field(min_length=5, max_length=5)
+    # Fixed slots avoid the provider's nested minItems/maxItems decoding defect.
+    question_1: QuestionDraft
+    question_2: QuestionDraft
+    question_3: QuestionDraft
+    question_4: QuestionDraft
+    question_5: QuestionDraft
 
 
 class Question(StrictModel):

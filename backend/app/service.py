@@ -482,9 +482,12 @@ class Service:
                             draft = self.generate(
                                 owner,
                                 QuizDraft,
-                                "Create exactly FIVE multiple-choice questions, exactly FOUR distinct options each, correct_index 0..3, explanation and supporting citations. Questions must be answerable from evidence.",
+                                "Fill question_1 through question_5 with five multiple-choice questions grounded in evidence. Each options object has four DISTINCT choices a,b,c,d; correct_index is 0 for a, 1 for b, 2 for c, 3 for d. Exactly one choice is correct. Include an explanation and exact supporting citations for each question.",
                                 chosen,
                             )
+                            draft = {"questions": [draft[f"question_{i}"] for i in range(1, 6)]}
+                            for item in draft["questions"]:
+                                item["options"] = [item["options"][key] for key in ("a", "b", "c", "d")]
                             if len(draft["questions"]) != 5:
                                 raise ValueError(
                                     "invalid_quiz|The model did not produce five questions. Please retry."

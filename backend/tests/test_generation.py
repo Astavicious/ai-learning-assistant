@@ -37,16 +37,14 @@ def test_invalid_quiz_options_are_rejected(client, monkeypatch):
         client.app.state.service,
         "generate",
         lambda *args: {
-            "questions": [
-                {
-                    "question": "Test",
-                    "options": ["one", "one", "three", "four"],
-                    "correct_index": 0,
-                    "explanation": "test",
-                    "citations": [],
-                }
-            ]
-            * 5
+            f"question_{i}": {
+                "question": "Test",
+                "options": {"a": "one", "b": "one", "c": "three", "d": "four"},
+                "correct_index": 0,
+                "explanation": "test",
+                "citations": [],
+            }
+            for i in range(1, 6)
         },
     )
     response = client.post(
