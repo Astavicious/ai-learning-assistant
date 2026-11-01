@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: ai-learning-assistant-api
+    runtime: docker
+    plan: free
+    healthCheckPath: /api/health
+    envVars:
+      - key: GROQ_API_KEY
+        sync: false
+      - key: GENERATION_MODEL
+        value: openai/gpt-oss-20b
+      - key: ALLOWED_ORIGINS
+        sync: false
+      - key: GLOBAL_DAILY_TOKENS
+        value: "60000"

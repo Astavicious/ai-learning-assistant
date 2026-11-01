@@ -1,0 +1,1553 @@
+{
+  "dataset_version": "1.0.0",
+  "dataset_sha256": "cd8e2c70676730c8d629b86772ecb0937e97eee0fc66a93894fd7cc9a8a6c9e9",
+  "date_utc": "2026-11-01T19:21:29.058197+00:00",
+  "model": "openai/gpt-oss-20b",
+  "embedding_model": "BAAI/bge-small-en-v1.5",
+  "retrieval_hits": 30,
+  "answerable_total": 30,
+  "retrieval_median_seconds": 0.030999999988125637,
+  "process_peak_rss_mib": 251.03125,
+  "answer_evaluation": "pending manual rubric review",
+  "records": [
+    {
+      "id": "a01",
+      "retrieval_seconds": 0.078,
+      "retrieved": [
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-1-Pure-Functions.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-1-Pure-Functions.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 2
+        }
+      ],
+      "page_hit": true,
+      "answer": {
+        "status": "answered",
+        "answer": "A function is pure if it (1) returns the same output for the same input and (2) has no side effects.",
+        "citations": [
+          {
+            "source_id": "8d591fd5f68ca7b325480eb3631894fb",
+            "document_id": "sample-Lecture-1-Pure-Functions",
+            "filename": "Lecture-1-Pure-Functions.pdf",
+            "page": 1,
+            "quote": "A pure function returns the same output for the same input and has no side effects."
+          }
+        ]
+      },
+      "manual_correct": null,
+      "response_seconds": 4.266
+    },
+    {
+      "id": "a02",
+      "retrieval_seconds": 0.234,
+      "retrieved": [
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-1-Pure-Functions.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-1-Pure-Functions.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 1
+        }
+      ],
+      "page_hit": true,
+      "answer": {
+        "status": "answered",
+        "answer": "Because the function `square` is pure and referentially transparent, the expression `square 4` always evaluates to the same value, 16. Therefore, replacing the call `square 4` with the literal `16` does not change the program\u2019s observable behavior.",
+        "citations": [
+          {
+            "source_id": "8d591fd5f68ca7b325480eb3631894fb",
+            "document_id": "sample-Lecture-1-Pure-Functions",
+            "filename": "Lecture-1-Pure-Functions.pdf",
+            "page": 1,
+            "quote": "The expression square 4 can be replaced with 16. A function that adds the current clock time to x would not have this property."
+          }
+        ]
+      },
+      "manual_correct": null,
+      "response_seconds": 1.094
+    },
+    {
+      "id": "a03",
+      "retrieval_seconds": 0.594,
+      "retrieved": [
+        {
+          "document": "Lecture-1-Pure-Functions.pdf",
+          "page": 1
+        },
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-1-Pure-Functions.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 1
+        }
+      ],
+      "page_hit": true,
+      "answer": {
+        "status": "answered",
+        "answer": "No \u2013 reading the current clock inside a calculation introduces a side effect and breaks purity. A pure function must return the same result for the same inputs and have no observable side effects. Reading the clock depends on an external, changing value, so the function\u2019s output can vary even with identical inputs, violating referential transparency.",
+        "citations": [
+          {
+            "source_id": "8d591fd5f68ca7b325480eb3631894fb",
+            "document_id": "sample-Lecture-1-Pure-Functions",
+            "filename": "Lecture-1-Pure-Functions.pdf",
+            "page": 1,
+            "quote": "Reading the current clock also prevents a function from depending only on its explicit inputs."
+          },
+          {
+            "source_id": "8d591fd5f68ca7b325480eb3631894fb",
+            "document_id": "sample-Lecture-1-Pure-Functions",
+            "filename": "Lecture-1-Pure-Functions.pdf",
+            "page": 1,
+            "quote": "A function that adds the current clock time to x would not have this property."
+          }
+        ]
+      },
+      "manual_correct": null,
+      "response_seconds": 0.812
+    },
+    {
+      "id": "a04",
+      "retrieval_seconds": 0.469,
+      "retrieved": [
+        {
+          "document": "Lecture-1-Pure-Functions.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 1
+        }
+      ],
+      "page_hit": true,
+      "answer": {
+        "status": "answered",
+        "answer": "The type signature `Int -> Int -> Int` describes a function that takes two `Int` arguments and returns an `Int` result.",
+        "citations": [
+          {
+            "source_id": "b00fac9bc619a506883d463e879dc869",
+            "document_id": "sample-Lecture-1-Pure-Functions",
+            "filename": "Lecture-1-Pure-Functions.pdf",
+            "page": 2,
+            "quote": "A function accepting two integers and returning an integer can have type Int -> Int -> Int. Arrows associate to the right."
+          }
+        ]
+      },
+      "manual_correct": null,
+      "response_seconds": 24.734
+    },
+    {
+      "id": "a05",
+      "retrieval_seconds": 0.016,
+      "retrieved": [
+        {
+          "document": "Lecture-1-Pure-Functions.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-1-Pure-Functions.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 1
+        }
+      ],
+      "page_hit": true,
+      "answer": {
+        "status": "answered",
+        "answer": "Immutability prevents surprising changes that can occur when multiple parts of a program hold references to the same mutable value. Because an immutable value cannot be updated in place, any new value created by a function is a distinct object; the original value remains unchanged. This guarantees that sharing a reference does not lead to hidden side\u2011effects, making the program\u2019s behavior predictable and referentially transparent.",
+        "citations": [
+          {
+            "source_id": "b00fac9bc619a506883d463e879dc869",
+            "document_id": "sample-Lecture-1-Pure-Functions",
+            "filename": "Lecture-1-Pure-Functions.pdf",
+            "page": 2,
+            "quote": "An immutable value is not updated in place. Binding a new name or constructing a new list does not change the original value. This avoids surprising changes through shared references."
+          }
+        ]
+      },
+      "manual_correct": null,
+      "response_seconds": 18.578
+    },
+    {
+      "id": "a06",
+      "retrieval_seconds": 0.0,
+      "retrieved": [
+        {
+          "document": "Lecture-1-Pure-Functions.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-1-Pure-Functions.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 2
+        }
+      ],
+      "page_hit": true,
+      "answer": {
+        "status": "answered",
+        "answer": "Yes. A pure functional program can still produce output such as printing text, but the printing is not performed by a pure function. Instead, the program uses an explicit effect type \u2013 in Haskell this is the `IO` type. A pure function returns a value of a normal type (e.g., `Int` or `String`), while an effectful action that prints text has a type like `String -> IO ()`. The `IO` action represents the side\u2011effect of printing, and the pure core of the program can be tested independently of that effect.",
+        "citations": [
+          {
+            "source_id": "b00fac9bc619a506883d463e879dc869",
+            "document_id": "sample-Lecture-1-Pure-Functions",
+            "filename": "Lecture-1-Pure-Functions.pdf",
+            "page": 2,
+            "quote": "Purity does not mean a program cannot perform input or output. Haskell represents such effects explicitly using IO actions. For example, putStrLn :: String -> IO () describes an action that prints a string."
+          }
+        ]
+      },
+      "manual_correct": null,
+      "response_seconds": 10.641
+    },
+    {
+      "id": "a07",
+      "retrieval_seconds": 0.125,
+      "retrieved": [
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 1
+        },
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 1
+        }
+      ],
+      "page_hit": true,
+      "answer": {
+        "status": "answered",
+        "answer": "Structural recursion on a finite list terminates because the function is defined with a base case that handles the empty list and a recursive case that consumes the tail of the list, producing a strictly shorter list on each call. This guarantees that after a finite number of steps the empty list is reached, at which point recursion stops.",
+        "citations": [
+          {
+            "source_id": "ede32e8bfc162cb6b1f49972dd0b737f",
+            "document_id": "sample-Lecture-2-Recursion-and-Lists",
+            "filename": "Lecture-2-Recursion-and-Lists.pdf",
+            "page": 1,
+            "quote": "A recursive function calls itself on a smaller problem. A base case handles an input without further recursion; a recursive case reduces the input toward that base case. Without a reachable base case or a decreasing problem, evaluation may not terminate."
+          },
+          {
+            "source_id": "ede32e8bfc162cb6b1f49972dd0b737f",
+            "document_id": "sample-Lecture-2-Recursion-and-Lists",
+            "filename": "Lecture-2-Recursion-and-Lists.pdf",
+            "page": 1,
+            "quote": "Each recursive call consumes the tail, a strictly shorter finite list."
+          }
+        ]
+      },
+      "manual_correct": null,
+      "response_seconds": 36.968
+    },
+    {
+      "id": "a08",
+      "retrieval_seconds": 0.11,
+      "retrieved": [
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 1
+        },
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 1
+        }
+      ],
+      "page_hit": true,
+      "answer": {
+        "status": "answered",
+        "answer": "The trace of `sumList [2,3,4]` expands as follows:\n```\nsumList [2,3,4] = 2 + sumList [3,4]\n                 = 2 + (3 + sumList [4])\n                 = 2 + (3 + (4 + sumList []))\n                 = 2 + (3 + (4 + 0))\n                 = 9\n```\nThus the result is **9**.",
+        "citations": [
+          {
+            "source_id": "ede32e8bfc162cb6b1f49972dd0b737f",
+            "document_id": "sample-Lecture-2-Recursion-and-Lists",
+            "filename": "Lecture-2-Recursion-and-Lists.pdf",
+            "page": 1,
+            "quote": "For sumList [2,3,4], expansion gives 2 + (3 + (4 + 0)), which equals 9."
+          }
+        ]
+      },
+      "manual_correct": null,
+      "response_seconds": 12.984
+    },
+    {
+      "id": "a09",
+      "retrieval_seconds": 0.063,
+      "retrieved": [
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 2
+        }
+      ],
+      "page_hit": true,
+      "error": "provider_quota|The model provider is rate limiting requests. Wait a minute and retry.",
+      "response_seconds": 11.281
+    },
+    {
+      "id": "a10",
+      "retrieval_seconds": 0.031,
+      "retrieved": [
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 1
+        },
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-1-Pure-Functions.pdf",
+          "page": 2
+        }
+      ],
+      "page_hit": true,
+      "answer": {
+        "status": "answered",
+        "answer": "The underscore in the pattern `(_:xs)` is used to ignore the head element of the list because the length function does not need to know its value. It only needs to count how many elements remain, so the head is discarded and the tail `xs` is processed recursively.",
+        "citations": [
+          {
+            "source_id": "daf10f33b4bded3558f58eae2c2e5a69",
+            "document_id": "sample-Lecture-2-Recursion-and-Lists",
+            "filename": "Lecture-2-Recursion-and-Lists.pdf",
+            "page": 2,
+            "quote": "The underscore ignores a value that is not needed."
+          }
+        ]
+      },
+      "manual_correct": null,
+      "response_seconds": 15.766
+    },
+    {
+      "id": "a11",
+      "retrieval_seconds": 0.015,
+      "retrieved": [
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-1-Pure-Functions.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 1
+        },
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 1
+        }
+      ],
+      "page_hit": true,
+      "answer": {
+        "status": "answered",
+        "answer": "In Haskell, the colon operator (:) is a list constructor that prepends a single element to an existing list. It is a constant\u2011time operation because it only creates a new cons cell pointing to the original list. The append operator (++) concatenates two lists by traversing the entire left list; its cost is linear in the length of that left list. Thus, using (:) is cheaper than (++) when building a list element by element, whereas (++) is useful only when you need to join two already\u2011existing lists.\n",
+        "citations": [
+          {
+            "source_id": "daf10f33b4bded3558f58eae2c2e5a69",
+            "document_id": "sample-Lecture-2-Recursion-and-Lists",
+            "filename": "Lecture-2-Recursion-and-Lists.pdf",
+            "page": 2,
+            "quote": "The colon constructor prepends one element to a list. The expression 1 : [2,3] is [1,2,3]. The append operator ++ joins two lists; [1,2] ++ [3] is [1,2,3]. Traversing the left list makes append linear in the length of that left list."
+          }
+        ]
+      },
+      "manual_correct": null,
+      "response_seconds": 3.578
+    },
+    {
+      "id": "a12",
+      "retrieval_seconds": 0.016,
+      "retrieved": [
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-1-Pure-Functions.pdf",
+          "page": 1
+        }
+      ],
+      "page_hit": true,
+      "answer": {
+        "status": "answered",
+        "answer": "safeHead is preferable to head when a list might be empty because it avoids a runtime error by returning a value of type `Maybe a` that explicitly represents the empty case. The caller must handle the `Nothing` case, making the possibility of an empty list part of the type system and preventing accidental crashes.",
+        "citations": [
+          {
+            "source_id": "a2d7ee5b6e64e2046c957a5ffd6cc26d",
+            "document_id": "sample-Worksheet-1-Purity-and-Recursion",
+            "filename": "Worksheet-1-Purity-and-Recursion.pdf",
+            "page": 2,
+            "quote": "safeHead [] = Nothing safeHead (x:_) = Just x The result is Maybe a. safeHead [] returns Nothing; safeHead [9,8] returns Just 9. The caller must handle the Nothing case."
+          },
+          {
+            "source_id": "daf10f33b4bded3558f58eae2c2e5a69",
+            "document_id": "sample-Lecture-2-Recursion-and-Lists",
+            "filename": "Lecture-2-Recursion-and-Lists.pdf",
+            "page": 2,
+            "quote": "The built-in head is partial: head [] has no valid element to return and raises an error. A safer interface returns Maybe, such as safeHead [] = Nothing and safeHead (x:_) = Just x. Maybe makes the empty case explicit in the result type."
+          }
+        ]
+      },
+      "manual_correct": null,
+      "response_seconds": 20.672
+    },
+    {
+      "id": "a13",
+      "retrieval_seconds": 0.031,
+      "retrieved": [
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 1
+        },
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 1
+        }
+      ],
+      "page_hit": true,
+      "error": "provider_quota|The model provider is rate limiting requests. Wait a minute and retry.",
+      "response_seconds": 18.25
+    },
+    {
+      "id": "a14",
+      "retrieval_seconds": 0.047,
+      "retrieved": [
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 1
+        }
+      ],
+      "page_hit": true,
+      "error": "provider_quota|The model provider is rate limiting requests. Wait a minute and retry.",
+      "response_seconds": 1.203
+    },
+    {
+      "id": "a15",
+      "retrieval_seconds": 0.078,
+      "retrieved": [
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 1
+        },
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 1
+        },
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 1
+        }
+      ],
+      "page_hit": true,
+      "answer": {
+        "status": "answered",
+        "answer": "8",
+        "citations": [
+          {
+            "source_id": "2ebcceb48ff34a3a2ac163cc2e627d31",
+            "document_id": "sample-Lecture-3-Higher-Order-Functions-and-Folds",
+            "filename": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+            "page": 1,
+            "quote": "Function composition connects outputs to inputs: (f . g) x = f (g x). For f = (*2) and g = (+1), (f . g) 3 is 8."
+          }
+        ]
+      },
+      "manual_correct": null,
+      "response_seconds": 9.703
+    },
+    {
+      "id": "a16",
+      "retrieval_seconds": 0.016,
+      "retrieved": [
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 1
+        },
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-1-Pure-Functions.pdf",
+          "page": 2
+        }
+      ],
+      "page_hit": true,
+      "error": "provider_quota|The model provider is rate limiting requests. Wait a minute and retry.",
+      "response_seconds": 10.203
+    },
+    {
+      "id": "a17",
+      "retrieval_seconds": 0.094,
+      "retrieved": [
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 1
+        },
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 1
+        },
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 2
+        }
+      ],
+      "page_hit": true,
+      "answer": {
+        "status": "answered",
+        "answer": "For a strict numeric accumulator on a large finite list, use `Data.List.foldl'` rather than the non\u2011strict `foldl`.",
+        "citations": [
+          {
+            "source_id": "ba384d87771fd52909fdb62fb7e38d08",
+            "document_id": "sample-Lecture-3-Higher-Order-Functions-and-Folds",
+            "filename": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+            "page": 2,
+            "quote": "For a strict accumulated numeric result on a large finite list, prefer Data.List.foldl' to avoid a chain of unevaluated accumulator expressions. Ordinary foldl is not automatically strict in Haskell."
+          }
+        ]
+      },
+      "manual_correct": null,
+      "response_seconds": 0.906
+    },
+    {
+      "id": "a18",
+      "retrieval_seconds": 0.031,
+      "retrieved": [
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 1
+        }
+      ],
+      "page_hit": true,
+      "error": "The model returned an invalid supporting passage. Please retry.",
+      "response_seconds": 17.844
+    },
+    {
+      "id": "a19",
+      "retrieval_seconds": 0.016,
+      "retrieved": [
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 1
+        },
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 1
+        },
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 2
+        }
+      ],
+      "page_hit": true,
+      "error": "The model returned an invalid supporting passage. Please retry.",
+      "response_seconds": 18.515
+    },
+    {
+      "id": "a20",
+      "retrieval_seconds": 0.016,
+      "retrieved": [
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-1-Pure-Functions.pdf",
+          "page": 1
+        }
+      ],
+      "page_hit": true,
+      "answer": {
+        "status": "answered",
+        "answer": "The worksheet definition of factorial returns 24 for the input 4.",
+        "citations": [
+          {
+            "source_id": "c8eb26f32488f15e7b56922110b105c6",
+            "document_id": "sample-Worksheet-1-Purity-and-Recursion",
+            "filename": "Worksheet-1-Purity-and-Recursion.pdf",
+            "page": 1,
+            "quote": "factorial 4 returns 24"
+          }
+        ]
+      },
+      "manual_correct": null,
+      "response_seconds": 20.156
+    },
+    {
+      "id": "a21",
+      "retrieval_seconds": 0.016,
+      "retrieved": [
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 1
+        },
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-1-Pure-Functions.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-1-Pure-Functions.pdf",
+          "page": 1
+        }
+      ],
+      "page_hit": true,
+      "answer": {
+        "status": "answered",
+        "answer": "Calling the factorial definition on a negative integer never reaches the base case, so the recursion never terminates (it will keep decrementing the negative number further away from zero).",
+        "citations": [
+          {
+            "source_id": "c8eb26f32488f15e7b56922110b105c6",
+            "document_id": "sample-Worksheet-1-Purity-and-Recursion",
+            "filename": "Worksheet-1-Purity-and-Recursion.pdf",
+            "page": 1,
+            "quote": "Calling this definition on a negative integer does not reach the base case. A public interface should reject negatives or represent failure explicitly."
+          }
+        ]
+      },
+      "manual_correct": null,
+      "response_seconds": 15.5
+    },
+    {
+      "id": "a22",
+      "retrieval_seconds": 0.016,
+      "retrieved": [
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 1
+        },
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 2
+        }
+      ],
+      "page_hit": true,
+      "answer": {
+        "status": "answered",
+        "answer": "The expansion of `sumList [5,1]` is:\n```\nsumList [5,1] = 5 + sumList [1]\n               = 5 + (1 + sumList [])\n               = 5 + (1 + 0)\n               = 6\n```",
+        "citations": [
+          {
+            "source_id": "a2d7ee5b6e64e2046c957a5ffd6cc26d",
+            "document_id": "sample-Worksheet-1-Purity-and-Recursion",
+            "filename": "Worksheet-1-Purity-and-Recursion.pdf",
+            "page": 2,
+            "quote": "Exercise 4. Trace sumList [5,1]. Solution: sumList [5,1] = 5 + sumList [1] = 5 + (1 + sumList []) = 5 + (1 + 0) = 6."
+          }
+        ]
+      },
+      "manual_correct": null,
+      "response_seconds": 19.765
+    },
+    {
+      "id": "a23",
+      "retrieval_seconds": 0.016,
+      "retrieved": [
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-1-Pure-Functions.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 1
+        },
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 2
+        }
+      ],
+      "page_hit": true,
+      "error": "quota_exhausted|The daily free-generation allowance is exhausted. Try again tomorrow.",
+      "response_seconds": 0.0
+    },
+    {
+      "id": "a24",
+      "retrieval_seconds": 0.031,
+      "retrieved": [
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-1-Pure-Functions.pdf",
+          "page": 1
+        }
+      ],
+      "page_hit": true,
+      "error": "quota_exhausted|The daily free-generation allowance is exhausted. Try again tomorrow.",
+      "response_seconds": 0.0
+    },
+    {
+      "id": "a25",
+      "retrieval_seconds": 0.016,
+      "retrieved": [
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 1
+        },
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 2
+        }
+      ],
+      "page_hit": true,
+      "error": "quota_exhausted|The daily free-generation allowance is exhausted. Try again tomorrow.",
+      "response_seconds": 0.0
+    },
+    {
+      "id": "a26",
+      "retrieval_seconds": 0.015,
+      "retrieved": [
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-1-Pure-Functions.pdf",
+          "page": 1
+        },
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 2
+        }
+      ],
+      "page_hit": true,
+      "error": "quota_exhausted|The daily free-generation allowance is exhausted. Try again tomorrow.",
+      "response_seconds": 0.016
+    },
+    {
+      "id": "a27",
+      "retrieval_seconds": 0.016,
+      "retrieved": [
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 1
+        },
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 1
+        }
+      ],
+      "page_hit": true,
+      "error": "quota_exhausted|The daily free-generation allowance is exhausted. Try again tomorrow.",
+      "response_seconds": 0.0
+    },
+    {
+      "id": "a28",
+      "retrieval_seconds": 0.031,
+      "retrieved": [
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-1-Pure-Functions.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 2
+        }
+      ],
+      "page_hit": true,
+      "error": "quota_exhausted|The daily free-generation allowance is exhausted. Try again tomorrow.",
+      "response_seconds": 0.0
+    },
+    {
+      "id": "a29",
+      "retrieval_seconds": 0.031,
+      "retrieved": [
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 1
+        },
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 1
+        }
+      ],
+      "page_hit": true,
+      "error": "quota_exhausted|The daily free-generation allowance is exhausted. Try again tomorrow.",
+      "response_seconds": 0.0
+    },
+    {
+      "id": "a30",
+      "retrieval_seconds": 0.031,
+      "retrieved": [
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 1
+        },
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 2
+        }
+      ],
+      "page_hit": true,
+      "error": "quota_exhausted|The daily free-generation allowance is exhausted. Try again tomorrow.",
+      "response_seconds": 0.0
+    },
+    {
+      "id": "u01",
+      "retrieval_seconds": 0.016,
+      "retrieved": [
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 1
+        },
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 1
+        },
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 1
+        },
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 2
+        }
+      ],
+      "error": "quota_exhausted|The daily free-generation allowance is exhausted. Try again tomorrow.",
+      "response_seconds": 0.0
+    },
+    {
+      "id": "u02",
+      "retrieval_seconds": 0.031,
+      "retrieved": [
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 1
+        },
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-1-Pure-Functions.pdf",
+          "page": 1
+        }
+      ],
+      "error": "quota_exhausted|The daily free-generation allowance is exhausted. Try again tomorrow.",
+      "response_seconds": 0.0
+    },
+    {
+      "id": "u03",
+      "retrieval_seconds": 0.031,
+      "retrieved": [
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 1
+        },
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-1-Pure-Functions.pdf",
+          "page": 1
+        }
+      ],
+      "error": "quota_exhausted|The daily free-generation allowance is exhausted. Try again tomorrow.",
+      "response_seconds": 0.0
+    },
+    {
+      "id": "u04",
+      "retrieval_seconds": 0.016,
+      "retrieved": [
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-1-Pure-Functions.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-1-Pure-Functions.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 1
+        },
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 2
+        }
+      ],
+      "error": "quota_exhausted|The daily free-generation allowance is exhausted. Try again tomorrow.",
+      "response_seconds": 0.0
+    },
+    {
+      "id": "u05",
+      "retrieval_seconds": 0.031,
+      "retrieved": [
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-1-Pure-Functions.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 1
+        },
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 2
+        }
+      ],
+      "error": "quota_exhausted|The daily free-generation allowance is exhausted. Try again tomorrow.",
+      "response_seconds": 0.0
+    },
+    {
+      "id": "u06",
+      "retrieval_seconds": 0.016,
+      "retrieved": [
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-1-Pure-Functions.pdf",
+          "page": 1
+        },
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-1-Pure-Functions.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 1
+        }
+      ],
+      "error": "quota_exhausted|The daily free-generation allowance is exhausted. Try again tomorrow.",
+      "response_seconds": 0.0
+    },
+    {
+      "id": "u07",
+      "retrieval_seconds": 0.016,
+      "retrieved": [
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 1
+        },
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-1-Pure-Functions.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-1-Pure-Functions.pdf",
+          "page": 2
+        }
+      ],
+      "error": "quota_exhausted|The daily free-generation allowance is exhausted. Try again tomorrow.",
+      "response_seconds": 0.0
+    },
+    {
+      "id": "u08",
+      "retrieval_seconds": 0.031,
+      "retrieved": [
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 1
+        },
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 1
+        },
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 2
+        }
+      ],
+      "error": "quota_exhausted|The daily free-generation allowance is exhausted. Try again tomorrow.",
+      "response_seconds": 0.0
+    },
+    {
+      "id": "u09",
+      "retrieval_seconds": 0.015,
+      "retrieved": [
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-1-Pure-Functions.pdf",
+          "page": 1
+        },
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 1
+        },
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 2
+        }
+      ],
+      "error": "quota_exhausted|The daily free-generation allowance is exhausted. Try again tomorrow.",
+      "response_seconds": 0.016
+    },
+    {
+      "id": "u10",
+      "retrieval_seconds": 0.031,
+      "retrieved": [
+        {
+          "document": "Lecture-1-Pure-Functions.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-1-Pure-Functions.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 1
+        },
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 1
+        }
+      ],
+      "error": "quota_exhausted|The daily free-generation allowance is exhausted. Try again tomorrow.",
+      "response_seconds": 0.0
+    }
+  ]
+}

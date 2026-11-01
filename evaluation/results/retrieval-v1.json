@@ -1,0 +1,1244 @@
+{
+  "dataset_version": "1.0.0",
+  "dataset_sha256": "cd8e2c70676730c8d629b86772ecb0937e97eee0fc66a93894fd7cc9a8a6c9e9",
+  "date_utc": "2026-11-01T19:10:43.096728+00:00",
+  "model": "openai/gpt-oss-20b",
+  "embedding_model": "BAAI/bge-small-en-v1.5",
+  "retrieval_hits": 30,
+  "answerable_total": 30,
+  "retrieval_median_seconds": 0.07800000000861473,
+  "process_peak_rss_mib": 250.83984375,
+  "answer_evaluation": "not run",
+  "records": [
+    {
+      "id": "a01",
+      "retrieval_seconds": 0.063,
+      "retrieved": [
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-1-Pure-Functions.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-1-Pure-Functions.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 2
+        }
+      ],
+      "page_hit": true
+    },
+    {
+      "id": "a02",
+      "retrieval_seconds": 0.078,
+      "retrieved": [
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-1-Pure-Functions.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-1-Pure-Functions.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 1
+        }
+      ],
+      "page_hit": true
+    },
+    {
+      "id": "a03",
+      "retrieval_seconds": 0.093,
+      "retrieved": [
+        {
+          "document": "Lecture-1-Pure-Functions.pdf",
+          "page": 1
+        },
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-1-Pure-Functions.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 1
+        }
+      ],
+      "page_hit": true
+    },
+    {
+      "id": "a04",
+      "retrieval_seconds": 0.079,
+      "retrieved": [
+        {
+          "document": "Lecture-1-Pure-Functions.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 1
+        }
+      ],
+      "page_hit": true
+    },
+    {
+      "id": "a05",
+      "retrieval_seconds": 0.093,
+      "retrieved": [
+        {
+          "document": "Lecture-1-Pure-Functions.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-1-Pure-Functions.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 1
+        }
+      ],
+      "page_hit": true
+    },
+    {
+      "id": "a06",
+      "retrieval_seconds": 0.094,
+      "retrieved": [
+        {
+          "document": "Lecture-1-Pure-Functions.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-1-Pure-Functions.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 2
+        }
+      ],
+      "page_hit": true
+    },
+    {
+      "id": "a07",
+      "retrieval_seconds": 0.094,
+      "retrieved": [
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 1
+        },
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 1
+        }
+      ],
+      "page_hit": true
+    },
+    {
+      "id": "a08",
+      "retrieval_seconds": 0.109,
+      "retrieved": [
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 1
+        },
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 1
+        }
+      ],
+      "page_hit": true
+    },
+    {
+      "id": "a09",
+      "retrieval_seconds": 0.094,
+      "retrieved": [
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 2
+        }
+      ],
+      "page_hit": true
+    },
+    {
+      "id": "a10",
+      "retrieval_seconds": 0.078,
+      "retrieved": [
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 1
+        },
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-1-Pure-Functions.pdf",
+          "page": 2
+        }
+      ],
+      "page_hit": true
+    },
+    {
+      "id": "a11",
+      "retrieval_seconds": 0.094,
+      "retrieved": [
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-1-Pure-Functions.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 1
+        },
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 1
+        }
+      ],
+      "page_hit": true
+    },
+    {
+      "id": "a12",
+      "retrieval_seconds": 0.047,
+      "retrieved": [
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-1-Pure-Functions.pdf",
+          "page": 1
+        }
+      ],
+      "page_hit": true
+    },
+    {
+      "id": "a13",
+      "retrieval_seconds": 0.015,
+      "retrieved": [
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 1
+        },
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 1
+        }
+      ],
+      "page_hit": true
+    },
+    {
+      "id": "a14",
+      "retrieval_seconds": 0.032,
+      "retrieved": [
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 1
+        }
+      ],
+      "page_hit": true
+    },
+    {
+      "id": "a15",
+      "retrieval_seconds": 0.062,
+      "retrieved": [
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 1
+        },
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 1
+        },
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 1
+        }
+      ],
+      "page_hit": true
+    },
+    {
+      "id": "a16",
+      "retrieval_seconds": 0.094,
+      "retrieved": [
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 1
+        },
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-1-Pure-Functions.pdf",
+          "page": 2
+        }
+      ],
+      "page_hit": true
+    },
+    {
+      "id": "a17",
+      "retrieval_seconds": 0.062,
+      "retrieved": [
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 1
+        },
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 1
+        },
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 2
+        }
+      ],
+      "page_hit": true
+    },
+    {
+      "id": "a18",
+      "retrieval_seconds": 0.047,
+      "retrieved": [
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 1
+        }
+      ],
+      "page_hit": true
+    },
+    {
+      "id": "a19",
+      "retrieval_seconds": 0.047,
+      "retrieved": [
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 1
+        },
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 1
+        },
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 2
+        }
+      ],
+      "page_hit": true
+    },
+    {
+      "id": "a20",
+      "retrieval_seconds": 0.031,
+      "retrieved": [
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-1-Pure-Functions.pdf",
+          "page": 1
+        }
+      ],
+      "page_hit": true
+    },
+    {
+      "id": "a21",
+      "retrieval_seconds": 0.063,
+      "retrieved": [
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 1
+        },
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-1-Pure-Functions.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-1-Pure-Functions.pdf",
+          "page": 1
+        }
+      ],
+      "page_hit": true
+    },
+    {
+      "id": "a22",
+      "retrieval_seconds": 0.062,
+      "retrieved": [
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 1
+        },
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 2
+        }
+      ],
+      "page_hit": true
+    },
+    {
+      "id": "a23",
+      "retrieval_seconds": 0.078,
+      "retrieved": [
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-1-Pure-Functions.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 1
+        },
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 2
+        }
+      ],
+      "page_hit": true
+    },
+    {
+      "id": "a24",
+      "retrieval_seconds": 0.079,
+      "retrieved": [
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-1-Pure-Functions.pdf",
+          "page": 1
+        }
+      ],
+      "page_hit": true
+    },
+    {
+      "id": "a25",
+      "retrieval_seconds": 0.078,
+      "retrieved": [
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 1
+        },
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 2
+        }
+      ],
+      "page_hit": true
+    },
+    {
+      "id": "a26",
+      "retrieval_seconds": 0.062,
+      "retrieved": [
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-1-Pure-Functions.pdf",
+          "page": 1
+        },
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 2
+        }
+      ],
+      "page_hit": true
+    },
+    {
+      "id": "a27",
+      "retrieval_seconds": 0.11,
+      "retrieved": [
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 1
+        },
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 1
+        }
+      ],
+      "page_hit": true
+    },
+    {
+      "id": "a28",
+      "retrieval_seconds": 0.078,
+      "retrieved": [
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-1-Pure-Functions.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 2
+        }
+      ],
+      "page_hit": true
+    },
+    {
+      "id": "a29",
+      "retrieval_seconds": 0.093,
+      "retrieved": [
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 1
+        },
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 1
+        }
+      ],
+      "page_hit": true
+    },
+    {
+      "id": "a30",
+      "retrieval_seconds": 0.094,
+      "retrieved": [
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 1
+        },
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 2
+        }
+      ],
+      "page_hit": true
+    },
+    {
+      "id": "u01",
+      "retrieval_seconds": 0.078,
+      "retrieved": [
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 1
+        },
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 1
+        },
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 1
+        },
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 2
+        }
+      ]
+    },
+    {
+      "id": "u02",
+      "retrieval_seconds": 0.047,
+      "retrieved": [
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 1
+        },
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-1-Pure-Functions.pdf",
+          "page": 1
+        }
+      ]
+    },
+    {
+      "id": "u03",
+      "retrieval_seconds": 0.11,
+      "retrieved": [
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 1
+        },
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-1-Pure-Functions.pdf",
+          "page": 1
+        }
+      ]
+    },
+    {
+      "id": "u04",
+      "retrieval_seconds": 0.062,
+      "retrieved": [
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-1-Pure-Functions.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-1-Pure-Functions.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 1
+        },
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 2
+        }
+      ]
+    },
+    {
+      "id": "u05",
+      "retrieval_seconds": 0.047,
+      "retrieved": [
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-1-Pure-Functions.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 1
+        },
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 2
+        }
+      ]
+    },
+    {
+      "id": "u06",
+      "retrieval_seconds": 0.078,
+      "retrieved": [
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-1-Pure-Functions.pdf",
+          "page": 1
+        },
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-1-Pure-Functions.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 1
+        }
+      ]
+    },
+    {
+      "id": "u07",
+      "retrieval_seconds": 0.078,
+      "retrieved": [
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 1
+        },
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-1-Pure-Functions.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-1-Pure-Functions.pdf",
+          "page": 2
+        }
+      ]
+    },
+    {
+      "id": "u08",
+      "retrieval_seconds": 0.078,
+      "retrieved": [
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 1
+        },
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 1
+        },
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 2
+        }
+      ]
+    },
+    {
+      "id": "u09",
+      "retrieval_seconds": 0.047,
+      "retrieved": [
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-1-Pure-Functions.pdf",
+          "page": 1
+        },
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 1
+        },
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 2
+        }
+      ]
+    },
+    {
+      "id": "u10",
+      "retrieval_seconds": 0.11,
+      "retrieved": [
+        {
+          "document": "Lecture-1-Pure-Functions.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-1-Pure-Functions.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 1
+        },
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 1
+        }
+      ]
+    }
+  ]
+}
