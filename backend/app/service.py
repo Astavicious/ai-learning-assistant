@@ -125,6 +125,12 @@ class Service:
                     raise ValueError(
                         "chunk_limit|The session exceeds 2,000 text chunks. Remove a document and retry."
                     )
+                footprint = sum(p.stat().st_size for p in self.store.root.iterdir() if p.is_file())
+                estimated_index = sum(len(text.encode("utf-8")) for text in pages) * 6 + len(chunks) * 2048
+                if footprint + estimated_index > 250 * 1024 * 1024:
+                    raise ValueError(
+                        "storage_limit|The demo's temporary storage is full. Remove a document or retry later."
+                    )
                 vectors = []
                 if self.load_embeddings:
                     for offset in range(0, len(chunks), 8):

@@ -40,3 +40,27 @@ def test_chunks_overlap_without_crossing_pages():
     assert chunks[0].endswith("word349")
     assert chunks[1].startswith("word300 ")
     assert chunks[-1].endswith("word899")
+
+
+def test_typographic_equivalence_resolves_to_the_actual_source_spelling():
+    from app.grounding import resolve_citations
+
+    sources = [
+        {
+            "id": "s1",
+            "document_id": "d1",
+            "filename": "Lecture.pdf",
+            "page": 1,
+            "text": "Functions are first-class values. They don't change state.",
+        }
+    ]
+    result = resolve_citations(
+        [
+            {
+                "source_id": "s1",
+                "quote": "Functions are first\u2011class values. They don\u2019t change state.",
+            }
+        ],
+        sources,
+    )
+    assert result[0]["quote"] == "Functions are first-class values. They don't change state."

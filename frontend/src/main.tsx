@@ -41,6 +41,7 @@ const PdfPreview = lazy(() => import("./PdfPreview").then(module => ({default: m
 import "./style.css";
 
 type Tab = "Ask" | "Summary" | "Quiz" | "Flashcards";
+class ActivityCancelled extends Error {}
 const suggestions = [
   "What makes a function pure?",
   "How does recursion work on a list?",
@@ -295,6 +296,7 @@ function App() {
     };
   }, []);
   const handleError = useCallback((err: unknown) => {
+    if (err instanceof ActivityCancelled) return;
     setError(
       err instanceof Error
         ? err.message
@@ -381,10 +383,12 @@ function App() {
     }
   };
   const awaitJob = async (initial: Job) => {
+    const activityToken = sessionStorage.getItem("study-token");
     let current = initial;
     setJob(current);
     while (current.status === "queued" || current.status === "running") {
       await new Promise((resolve) => setTimeout(resolve, 1200));
+      if (activityToken !== sessionStorage.getItem("study-token")) throw new ActivityCancelled();
       if (!mounted.current) throw new Error("Workspace closed.");
       current = await api<Job>(`/api/jobs/${current.id}`);
       setJob(current);
@@ -463,8 +467,8 @@ function App() {
       const body = {
         kind: tab.toLowerCase(),
         document_ids: selected,
-        start_page: range.start ? Number(range.start) : null,
-        end_page: range.end ? Number(range.end) : null,
+        start_page: tab === "Summary" && range.start ? Number(range.start) : null,
+        end_page: tab === "Summary" && range.end ? Number(range.end) : null,
       };
       const result = await awaitJob(
         await api<Job>("/api/study-materials", {
@@ -608,7 +612,7 @@ function App() {
           <span className="status-dot" />
           {health}
         </div>
-        <button className="quiet" disabled={busy} onClick={() => void clear()}>
+        <button className="quiet" onClick={() => void clear()}>
           <Trash2 size={14} />
           Delete session
         </button>

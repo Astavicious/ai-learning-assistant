@@ -1,0 +1,243 @@
+{
+  "date_utc": "2026-11-01T19:36:44.988467+00:00",
+  "dataset_version": "1.0.0",
+  "dataset_sha256": "cd8e2c70676730c8d629b86772ecb0937e97eee0fc66a93894fd7cc9a8a6c9e9",
+  "model": "openai/gpt-oss-20b",
+  "reviewer": "Codex-assisted manual rubric review; not independent human grading",
+  "method": "Staged development evaluation with recorded rate-limit retries. Original raw outcomes retained. a13 additionally adjudicated from its saved live recheck draft using the tested punctuation resolver. This is not an untouched single-run benchmark of the final deployed commit.",
+  "retrieval_hits": 30,
+  "retrieval_total": 30,
+  "supported_correct_answers": 27,
+  "answerable_total": 30,
+  "unsupported_refusals": 10,
+  "unsupported_total": 10,
+  "all_reviewed_citations_resolve_to_real_sample_pages": true,
+  "warm_generation_median_seconds": 0.75,
+  "warm_generation_max_seconds": 36.968,
+  "latency_scope": "Successful saved model calls; excludes retrieval, job polling and deliberate pacing; includes any SDK retry wait. Not deployed end-to-end latency.",
+  "evaluation_model_tokens": 112153,
+  "evaluation_model_requests_including_rejections": 48,
+  "usage_scope": "Provider-reported usage on returned evaluation responses, including invalid-citation drafts; known rejected 429 reservations refunded; excludes smoke tests and non-evaluation calls.",
+  "records": [
+    {
+      "id": "a01",
+      "passed": true,
+      "notes": "Meets the fixed expected-content rubric and its supporting evidence."
+    },
+    {
+      "id": "a02",
+      "passed": true,
+      "notes": "Meets the fixed expected-content rubric and its supporting evidence."
+    },
+    {
+      "id": "a03",
+      "passed": true,
+      "notes": "Meets the fixed expected-content rubric and its supporting evidence."
+    },
+    {
+      "id": "a04",
+      "passed": true,
+      "notes": "Meets the fixed expected-content rubric and its supporting evidence."
+    },
+    {
+      "id": "a05",
+      "passed": false,
+      "notes": "Main idea correct, but the answer overclaims distinct object allocation and program-wide referential transparency; these are not established by the source."
+    },
+    {
+      "id": "a06",
+      "passed": true,
+      "notes": "Meets the fixed expected-content rubric and its supporting evidence."
+    },
+    {
+      "id": "a07",
+      "passed": true,
+      "notes": "Meets the fixed expected-content rubric and its supporting evidence."
+    },
+    {
+      "id": "a08",
+      "passed": true,
+      "notes": "Meets the fixed expected-content rubric and its supporting evidence."
+    },
+    {
+      "id": "a09",
+      "passed": true,
+      "notes": "Meets the fixed expected-content rubric and its supporting evidence."
+    },
+    {
+      "id": "a10",
+      "passed": true,
+      "notes": "Meets the fixed expected-content rubric and its supporting evidence."
+    },
+    {
+      "id": "a11",
+      "passed": false,
+      "notes": "Main colon/append distinction correct, but the added constant-time cons-cell cost explanation is not established by the supplied course text. Strict support rubric marks it unsuccessful."
+    },
+    {
+      "id": "a12",
+      "passed": true,
+      "notes": "Meets the fixed expected-content rubric and its supporting evidence."
+    },
+    {
+      "id": "a13",
+      "passed": true,
+      "notes": "Focused live draft is substantively correct. The punctuation resolver now maps its nonbreaking hyphen back to the actual source spelling, without a new generated answer.",
+      "answer": {
+        "status": "answered",
+        "answer": "Map is a higher\u2011order function because it takes a function as its first argument and returns a new list produced by applying that function to each element. This matches the definition of a higher\u2011order function, which is a function that takes a function as an argument or returns a function as a result.",
+        "citations": [
+          {
+            "source_id": "2ebcceb48ff34a3a2ac163cc2e627d31",
+            "document_id": "sample-Lecture-3-Higher-Order-Functions-and-Folds",
+            "filename": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+            "page": 1,
+            "quote": "A higher-order function takes a function as an argument or returns a function as a result. Haskell functions are first-class values: they can be passed to other functions and stored in data structures."
+          },
+          {
+            "source_id": "2ebcceb48ff34a3a2ac163cc2e627d31",
+            "document_id": "sample-Lecture-3-Higher-Order-Functions-and-Folds",
+            "filename": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+            "page": 1,
+            "quote": "map :: (a -> b) -> [a] -> [b]"
+          }
+        ]
+      }
+    },
+    {
+      "id": "a14",
+      "passed": true,
+      "notes": "Meets the fixed expected-content rubric and its supporting evidence."
+    },
+    {
+      "id": "a15",
+      "passed": true,
+      "notes": "Meets the fixed expected-content rubric and its supporting evidence."
+    },
+    {
+      "id": "a16",
+      "passed": true,
+      "notes": "Correct association and values, supported by the lecture citation. Also includes a real but less directly applicable worksheet example using [4,2]."
+    },
+    {
+      "id": "a17",
+      "passed": true,
+      "notes": "Meets the fixed expected-content rubric and its supporting evidence."
+    },
+    {
+      "id": "a18",
+      "passed": false,
+      "notes": "No validated answer delivered; the original quote failed validation and its focused live recheck was rate limited. Counted unsuccessful, not silently excluded."
+    },
+    {
+      "id": "a19",
+      "passed": true,
+      "notes": "Meets the fixed expected-content rubric and its supporting evidence."
+    },
+    {
+      "id": "a20",
+      "passed": true,
+      "notes": "Meets the fixed expected-content rubric and its supporting evidence."
+    },
+    {
+      "id": "a21",
+      "passed": true,
+      "notes": "Meets the fixed expected-content rubric and its supporting evidence."
+    },
+    {
+      "id": "a22",
+      "passed": true,
+      "notes": "Meets the fixed expected-content rubric and its supporting evidence."
+    },
+    {
+      "id": "a23",
+      "passed": true,
+      "notes": "Meets the fixed expected-content rubric and its supporting evidence."
+    },
+    {
+      "id": "a24",
+      "passed": true,
+      "notes": "Meets the fixed expected-content rubric and its supporting evidence."
+    },
+    {
+      "id": "a25",
+      "passed": true,
+      "notes": "Meets the fixed expected-content rubric and its supporting evidence."
+    },
+    {
+      "id": "a26",
+      "passed": true,
+      "notes": "Meets the fixed expected-content rubric and its supporting evidence."
+    },
+    {
+      "id": "a27",
+      "passed": true,
+      "notes": "Meets the fixed expected-content rubric and its supporting evidence."
+    },
+    {
+      "id": "a28",
+      "passed": true,
+      "notes": "Meets the fixed expected-content rubric and its supporting evidence."
+    },
+    {
+      "id": "a29",
+      "passed": true,
+      "notes": "Meets the fixed expected-content rubric and its supporting evidence."
+    },
+    {
+      "id": "a30",
+      "passed": true,
+      "notes": "Meets the fixed expected-content rubric and its supporting evidence."
+    },
+    {
+      "id": "u01",
+      "passed": true,
+      "notes": "Explicitly declines the unsupported request; no unsupported answer or citation displayed."
+    },
+    {
+      "id": "u02",
+      "passed": true,
+      "notes": "Explicitly declines the unsupported request; no unsupported answer or citation displayed."
+    },
+    {
+      "id": "u03",
+      "passed": true,
+      "notes": "Explicitly declines the unsupported request; no unsupported answer or citation displayed."
+    },
+    {
+      "id": "u04",
+      "passed": true,
+      "notes": "Explicitly declines the unsupported request; no unsupported answer or citation displayed."
+    },
+    {
+      "id": "u05",
+      "passed": true,
+      "notes": "Explicitly declines the unsupported request; no unsupported answer or citation displayed."
+    },
+    {
+      "id": "u06",
+      "passed": true,
+      "notes": "Explicitly declines the unsupported request; no unsupported answer or citation displayed."
+    },
+    {
+      "id": "u07",
+      "passed": true,
+      "notes": "Explicitly declines the unsupported request; no unsupported answer or citation displayed."
+    },
+    {
+      "id": "u08",
+      "passed": true,
+      "notes": "Explicitly declines the unsupported request; no unsupported answer or citation displayed."
+    },
+    {
+      "id": "u09",
+      "passed": true,
+      "notes": "Explicitly declines the unsupported request; no unsupported answer or citation displayed."
+    },
+    {
+      "id": "u10",
+      "passed": true,
+      "notes": "Explicitly declines the unsupported request; no unsupported answer or citation displayed."
+    }
+  ]
+}

@@ -105,3 +105,42 @@ def test_tokenizer_chunking_does_not_truncate_long_pages():
     text = " ".join(f"word{i}" for i in range(1200))
     chunks = chunk_page(text, tokenizer=tokenizer)
     assert chunks[-1].endswith("word1199")
+
+
+def test_absolute_expiry_is_enforced_even_after_recent_activity(client):
+    headers = session(client)
+    store = client.app.state.store
+    owner = store.authorize(headers["Authorization"])
+    store.execute(
+        "UPDATE sessions SET created=?,touched=? WHERE id=?", (time.time() - 86401, time.time(), owner)
+    )
+    assert client.get("/api/documents", headers=headers).status_code == 401
+
+
+def test_restart_marks_interrupted_jobs_failed_without_restarting_them(tmp_path):
+    from app.store import Store
+
+    store = Store(tmp_path)
+    credentials = store.create_session()
+    owner = store.authorize("Bearer " + credentials["access_token"])
+    job = store.new_job(owner)
+    restarted = Store(tmp_path)
+    recovered = restarted.job(owner, job["id"])
+    assert recovered["status"] == "failed"
+    assert recovered["error"]["code"] == "interrupted"
+    restarted.db.close()
+    store.db.close()
+
+
+def test_private_session_deletion_removes_files_and_source_text(client):
+    headers = session(client)
+    response = client.post(
+        "/api/documents", headers=headers, files={"file": ("private.pdf", pdf(), "application/pdf")}
+    )
+    doc_id = client.get("/api/jobs/" + response.json()["id"], headers=headers).json()["document_id"]
+    store = client.app.state.store
+    assert (store.root / f"{doc_id}.pdf").exists()
+    assert client.delete("/api/session", headers=headers).status_code == 204
+    assert not (store.root / f"{doc_id}.pdf").exists()
+    assert not store.execute("SELECT text FROM pages WHERE document_id=?", (doc_id,))
+    assert not store.execute("SELECT text FROM chunks WHERE document_id=?", (doc_id,))

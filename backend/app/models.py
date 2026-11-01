@@ -35,7 +35,7 @@ class SummaryDraft(StrictModel):
     key_concepts: list[str]
     definitions: list[str]
     revision_points: list[str]
-    citations: list[Evidence]
+    citations: list[Evidence] = Field(min_length=1)
 
 
 class SummarySection(StrictModel):
@@ -56,14 +56,14 @@ class Summary(StrictModel):
 
 class QuestionDraft(StrictModel):
     question: str
-    options: list[str]
-    correct_index: int
+    options: list[str] = Field(min_length=4, max_length=4)
+    correct_index: Literal[0, 1, 2, 3]
     explanation: str
-    citations: list[Evidence]
+    citations: list[Evidence] = Field(min_length=1)
 
 
 class QuizDraft(StrictModel):
-    questions: list[QuestionDraft]
+    questions: list[QuestionDraft] = Field(min_length=5, max_length=5)
 
 
 class Question(StrictModel):
@@ -82,11 +82,11 @@ class Quiz(StrictModel):
 class CardDraft(StrictModel):
     question: str
     answer: str
-    citations: list[Evidence]
+    citations: list[Evidence] = Field(min_length=1)
 
 
 class CardsDraft(StrictModel):
-    cards: list[CardDraft]
+    cards: list[CardDraft] = Field(min_length=10, max_length=10)
 
 
 class Flashcard(StrictModel):

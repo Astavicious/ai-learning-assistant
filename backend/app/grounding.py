@@ -34,13 +34,21 @@ def normalize(text):
 
 
 def resolve_citations(citations, sources):
+    typography = str.maketrans(
+        {"\u2010": "-", "\u2011": "-", "\u2018": "'", "\u2019": "'", "\u201c": '"', "\u201d": '"'}
+    )
     lookup = {source["id"]: source for source in sources}
     resolved = []
     for citation in citations:
         source = lookup.get(citation["source_id"])
         quote = normalize(citation["quote"])
-        if source is None or len(quote) < 3 or quote not in normalize(source["text"]):
+        text = normalize(source["text"]) if source else ""
+        offset = text.translate(typography).find(quote.translate(typography))
+        if source is None or len(quote) < 3 or offset < 0:
             raise ValueError("The model returned an invalid supporting passage. Please retry.")
+        # Translation is one character to one character. Return the actual source
+        # spelling, never the model's altered punctuation or a fuzzy word match.
+        quote = text[offset : offset + len(quote)]
         resolved.append(
             {
                 "source_id": source["id"],

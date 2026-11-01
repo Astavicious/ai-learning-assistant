@@ -180,7 +180,10 @@ def create_app(data_dir=None, load_embeddings=True):
                 raise HTTPException(
                     413, "Your session supports 5 PDFs and 25 MB total. Remove a document and retry."
                 )
-            if sum(p.stat().st_size for p in store.root.glob("*.pdf")) + len(content) > 250 * 1024 * 1024:
+            if (
+                sum(p.stat().st_size for p in store.root.iterdir() if p.is_file()) + len(content)
+                > 250 * 1024 * 1024
+            ):
                 raise HTTPException(503, "Temporary demo storage is full. Try again later.")
             doc_id = uid()
             doc = {

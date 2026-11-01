@@ -1,13 +1,13 @@
 {
   "dataset_version": "1.0.0",
   "dataset_sha256": "cd8e2c70676730c8d629b86772ecb0937e97eee0fc66a93894fd7cc9a8a6c9e9",
-  "date_utc": "2026-11-01T19:21:29.058197+00:00",
+  "date_utc": "2026-11-01T19:32:21.778119+00:00",
   "model": "openai/gpt-oss-20b",
   "embedding_model": "BAAI/bge-small-en-v1.5",
   "retrieval_hits": 30,
   "answerable_total": 30,
-  "retrieval_median_seconds": 0.030999999988125637,
-  "process_peak_rss_mib": 251.03125,
+  "retrieval_median_seconds": 0.046999999991385266,
+  "process_peak_rss_mib": 250.5,
   "answer_evaluation": "pending manual rubric review",
   "records": [
     {
@@ -394,7 +394,7 @@
     },
     {
       "id": "a09",
-      "retrieval_seconds": 0.063,
+      "retrieval_seconds": 0.031,
       "retrieved": [
         {
           "document": "Lecture-2-Recursion-and-Lists.pdf",
@@ -422,8 +422,21 @@
         }
       ],
       "page_hit": true,
-      "error": "provider_quota|The model provider is rate limiting requests. Wait a minute and retry.",
-      "response_seconds": 11.281
+      "answer": {
+        "status": "answered",
+        "answer": "In a Haskell list pattern, `[]` matches an empty list, while `x:xs` matches a non\u2011empty list, binding `x` to the first element (the head) and `xs` to the remaining elements (the tail).",
+        "citations": [
+          {
+            "source_id": "ede32e8bfc162cb6b1f49972dd0b737f",
+            "document_id": "sample-Lecture-2-Recursion-and-Lists",
+            "filename": "Lecture-2-Recursion-and-Lists.pdf",
+            "page": 1,
+            "quote": "A Haskell list is either empty, written [], or a head followed by a tail, written x:xs. Pattern matching separates these cases."
+          }
+        ]
+      },
+      "manual_correct": null,
+      "response_seconds": 0.875
     },
     {
       "id": "a10",
@@ -572,42 +585,42 @@
     },
     {
       "id": "a13",
-      "retrieval_seconds": 0.031,
-      "retrieved": [
-        {
-          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
-          "page": 1
-        },
-        {
-          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
-          "page": 1
-        },
-        {
-          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
-          "page": 2
-        },
-        {
-          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
-          "page": 2
-        },
-        {
-          "document": "Lecture-2-Recursion-and-Lists.pdf",
-          "page": 2
-        },
-        {
-          "document": "Lecture-2-Recursion-and-Lists.pdf",
-          "page": 1
-        }
-      ],
-      "page_hit": true,
-      "error": "provider_quota|The model provider is rate limiting requests. Wait a minute and retry.",
-      "response_seconds": 18.25
-    },
-    {
-      "id": "a14",
       "retrieval_seconds": 0.047,
       "retrieved": [
         {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 1
+        },
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 1
+        }
+      ],
+      "page_hit": true,
+      "error": "The model returned an invalid supporting passage. Please retry.",
+      "response_seconds": 0.609
+    },
+    {
+      "id": "a14",
+      "retrieval_seconds": 0.078,
+      "retrieved": [
+        {
           "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
           "page": 1
         },
@@ -633,8 +646,21 @@
         }
       ],
       "page_hit": true,
-      "error": "provider_quota|The model provider is rate limiting requests. Wait a minute and retry.",
-      "response_seconds": 1.203
+      "answer": {
+        "status": "answered",
+        "answer": "[2,4]",
+        "citations": [
+          {
+            "source_id": "2ebcceb48ff34a3a2ac163cc2e627d31",
+            "document_id": "sample-Lecture-3-Higher-Order-Functions-and-Folds",
+            "filename": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+            "page": 1,
+            "quote": "filter even [1,2,3,4] == [2,4]"
+          }
+        ]
+      },
+      "manual_correct": null,
+      "response_seconds": 0.75
     },
     {
       "id": "a15",
@@ -684,7 +710,7 @@
     },
     {
       "id": "a16",
-      "retrieval_seconds": 0.016,
+      "retrieval_seconds": 0.079,
       "retrieved": [
         {
           "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
@@ -712,8 +738,28 @@
         }
       ],
       "page_hit": true,
-      "error": "provider_quota|The model provider is rate limiting requests. Wait a minute and retry.",
-      "response_seconds": 10.203
+      "answer": {
+        "status": "answered",
+        "answer": "foldr associates subtraction as 1\u00a0-\u00a0(2\u00a0-\u00a0(3\u00a0-\u00a00)) which equals 2, while foldl associates it as ((0\u00a0-\u00a01)\u00a0-\u00a02)\u00a0-\u00a03 which equals -6.",
+        "citations": [
+          {
+            "source_id": "1c6c27eec87358efb8a2de3c61c8fda1",
+            "document_id": "sample-Worksheet-2-Map-Filter-and-Folds",
+            "filename": "Worksheet-2-Map-Filter-and-Folds.pdf",
+            "page": 2,
+            "quote": "foldr gives 4 - (2 - 0) = 2. foldl gives (0 - 4) - 2 = -6."
+          },
+          {
+            "source_id": "ba384d87771fd52909fdb62fb7e38d08",
+            "document_id": "sample-Lecture-3-Higher-Order-Functions-and-Folds",
+            "filename": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+            "page": 2,
+            "quote": "foldr (-) 0 [1,2,3] equals 2, while foldl (-) 0 [1,2,3] equals -6."
+          }
+        ]
+      },
+      "manual_correct": null,
+      "response_seconds": 0.75
     },
     {
       "id": "a17",
@@ -763,7 +809,7 @@
     },
     {
       "id": "a18",
-      "retrieval_seconds": 0.031,
+      "retrieval_seconds": 0.062,
       "retrieved": [
         {
           "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
@@ -792,11 +838,11 @@
       ],
       "page_hit": true,
       "error": "The model returned an invalid supporting passage. Please retry.",
-      "response_seconds": 17.844
+      "response_seconds": 0.672
     },
     {
       "id": "a19",
-      "retrieval_seconds": 0.016,
+      "retrieval_seconds": 0.031,
       "retrieved": [
         {
           "document": "Worksheet-1-Purity-and-Recursion.pdf",
@@ -824,8 +870,21 @@
         }
       ],
       "page_hit": true,
-      "error": "The model returned an invalid supporting passage. Please retry.",
-      "response_seconds": 18.515
+      "answer": {
+        "status": "answered",
+        "answer": "The empty product is defined to be 1 because 1 is the multiplicative identity: multiplying any number by 1 leaves it unchanged. If the empty product were 0, then multiplying any list of numbers would incorrectly yield 0. The definition in the evidence states that the base case for a product function on a list is 1, and that a base case of 0 would incorrectly make every finite product zero.",
+        "citations": [
+          {
+            "source_id": "c8eb26f32488f15e7b56922110b105c6",
+            "document_id": "sample-Worksheet-1-Purity-and-Recursion",
+            "filename": "Worksheet-1-Purity-and-Recursion.pdf",
+            "page": 1,
+            "quote": "productList [] = 1 productList (x:xs) = x * productList xs The empty product is 1, the identity for multiplication. productList [2,3,4] returns 24. A base case of 0 would incorrectly make every finite product zero."
+          }
+        ]
+      },
+      "manual_correct": null,
+      "response_seconds": 0.516
     },
     {
       "id": "a20",
@@ -967,39 +1026,6 @@
     },
     {
       "id": "a23",
-      "retrieval_seconds": 0.016,
-      "retrieved": [
-        {
-          "document": "Worksheet-1-Purity-and-Recursion.pdf",
-          "page": 2
-        },
-        {
-          "document": "Lecture-2-Recursion-and-Lists.pdf",
-          "page": 2
-        },
-        {
-          "document": "Lecture-2-Recursion-and-Lists.pdf",
-          "page": 1
-        },
-        {
-          "document": "Lecture-1-Pure-Functions.pdf",
-          "page": 2
-        },
-        {
-          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
-          "page": 1
-        },
-        {
-          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
-          "page": 2
-        }
-      ],
-      "page_hit": true,
-      "error": "quota_exhausted|The daily free-generation allowance is exhausted. Try again tomorrow.",
-      "response_seconds": 0.0
-    },
-    {
-      "id": "a24",
       "retrieval_seconds": 0.031,
       "retrieved": [
         {
@@ -1007,6 +1033,52 @@
           "page": 2
         },
         {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-2-Recursion-and-Lists.pdf",
+          "page": 1
+        },
+        {
+          "document": "Lecture-1-Pure-Functions.pdf",
+          "page": 2
+        },
+        {
+          "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+          "page": 1
+        },
+        {
+          "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
+          "page": 2
+        }
+      ],
+      "page_hit": true,
+      "answer": {
+        "status": "answered",
+        "answer": "safeHead [] returns Nothing and safeHead [9,8] returns Just 9.",
+        "citations": [
+          {
+            "source_id": "a2d7ee5b6e64e2046c957a5ffd6cc26d",
+            "document_id": "sample-Worksheet-1-Purity-and-Recursion",
+            "filename": "Worksheet-1-Purity-and-Recursion.pdf",
+            "page": 2,
+            "quote": "safeHead [] = Nothing safeHead (x:_) = Just x The result is Maybe a. safeHead [] returns Nothing; safeHead [9,8] returns Just 9."
+          }
+        ]
+      },
+      "manual_correct": null,
+      "response_seconds": 0.547
+    },
+    {
+      "id": "a24",
+      "retrieval_seconds": 0.046,
+      "retrieved": [
+        {
+          "document": "Worksheet-1-Purity-and-Recursion.pdf",
+          "page": 2
+        },
+        {
           "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
           "page": 2
         },
@@ -1028,12 +1100,25 @@
         }
       ],
       "page_hit": true,
-      "error": "quota_exhausted|The daily free-generation allowance is exhausted. Try again tomorrow.",
-      "response_seconds": 0.0
+      "answer": {
+        "status": "answered",
+        "answer": "The definition `count xs = 1 + count xs` has two distinct problems:\n\n1. **No base case** \u2013 The function never distinguishes an empty list from a non\u2011empty one, so it can never terminate. The evidence states: *\"it has no base case and passes the same input back to itself. It neither terminates on [] nor reduces a nonempty list.\"* (source_id \"a2d7ee5b6e64e2046c957a5ffd6cc26d\").\n\n2. **No decreasing argument** \u2013 Each recursive call receives exactly the same argument `xs`, so the problem size does not shrink toward the base case. The evidence notes: *\"A correct structural recursion separates [] from _:xs and recurses only on xs.\"* (source_id \"a2d7ee5b6e64e2046c957a5ffd6cc26d\").\n\nBoth issues together mean the function will loop forever and cannot compute a meaningful count.\n",
+        "citations": [
+          {
+            "source_id": "a2d7ee5b6e64e2046c957a5ffd6cc26d",
+            "document_id": "sample-Worksheet-1-Purity-and-Recursion",
+            "filename": "Worksheet-1-Purity-and-Recursion.pdf",
+            "page": 2,
+            "quote": "it has no base case and passes the same input back to itself. It neither terminates on [] nor reduces a nonempty list. A correct structural recursion separates [] from _:xs and recurses only on xs."
+          }
+        ]
+      },
+      "manual_correct": null,
+      "response_seconds": 0.813
     },
     {
       "id": "a25",
-      "retrieval_seconds": 0.016,
+      "retrieval_seconds": 0.094,
       "retrieved": [
         {
           "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
@@ -1061,12 +1146,25 @@
         }
       ],
       "page_hit": true,
-      "error": "quota_exhausted|The daily free-generation allowance is exhausted. Try again tomorrow.",
-      "response_seconds": 0.0
+      "answer": {
+        "status": "answered",
+        "answer": "[4,7,10]",
+        "citations": [
+          {
+            "source_id": "00990781f73e601a179f7ea7705177b3",
+            "document_id": "sample-Worksheet-2-Map-Filter-and-Folds",
+            "filename": "Worksheet-2-Map-Filter-and-Folds.pdf",
+            "page": 1,
+            "quote": "Solution: [4,7,10]. map transforms every element without selecting a subset."
+          }
+        ]
+      },
+      "manual_correct": null,
+      "response_seconds": 0.718
     },
     {
       "id": "a26",
-      "retrieval_seconds": 0.015,
+      "retrieval_seconds": 0.047,
       "retrieved": [
         {
           "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
@@ -1094,12 +1192,25 @@
         }
       ],
       "page_hit": true,
-      "error": "quota_exhausted|The daily free-generation allowance is exhausted. Try again tomorrow.",
-      "response_seconds": 0.016
+      "answer": {
+        "status": "answered",
+        "answer": "Filtering before doubling keeps only the even numbers, so only those are doubled. Filtering after doubling would double all numbers first, then keep the even results, which in this case would keep all four doubled inputs.",
+        "citations": [
+          {
+            "source_id": "00990781f73e601a179f7ea7705177b3",
+            "document_id": "sample-Worksheet-2-Map-Filter-and-Folds",
+            "filename": "Worksheet-2-Map-Filter-and-Folds.pdf",
+            "page": 1,
+            "quote": "The filter runs before map in this expression. Reversing the operations changes the meaning: filtering even after doubling would keep all four doubled inputs."
+          }
+        ]
+      },
+      "manual_correct": null,
+      "response_seconds": 0.61
     },
     {
       "id": "a27",
-      "retrieval_seconds": 0.016,
+      "retrieval_seconds": 0.093,
       "retrieved": [
         {
           "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
@@ -1127,8 +1238,21 @@
         }
       ],
       "page_hit": true,
-      "error": "quota_exhausted|The daily free-generation allowance is exhausted. Try again tomorrow.",
-      "response_seconds": 0.0
+      "answer": {
+        "status": "answered",
+        "answer": "2",
+        "citations": [
+          {
+            "source_id": "00990781f73e601a179f7ea7705177b3",
+            "document_id": "sample-Worksheet-2-Map-Filter-and-Folds",
+            "filename": "Worksheet-2-Map-Filter-and-Folds.pdf",
+            "page": 1,
+            "quote": "countEven [1,2,4,5] returns 2. Composition passes the filtered list to length. The expression is equivalent to countEven xs = length (filter even xs)."
+          }
+        ]
+      },
+      "manual_correct": null,
+      "response_seconds": 0.61
     },
     {
       "id": "a28",
@@ -1160,12 +1284,25 @@
         }
       ],
       "page_hit": true,
-      "error": "quota_exhausted|The daily free-generation allowance is exhausted. Try again tomorrow.",
-      "response_seconds": 0.0
+      "answer": {
+        "status": "answered",
+        "answer": "foldr (:) [] [1,2,3] reconstructs the list by applying the list constructor (:) to each element and the empty list, preserving the original order.",
+        "citations": [
+          {
+            "source_id": "1c6c27eec87358efb8a2de3c61c8fda1",
+            "document_id": "sample-Worksheet-2-Map-Filter-and-Folds",
+            "filename": "Worksheet-2-Map-Filter-and-Folds.pdf",
+            "page": 2,
+            "quote": "foldr (:) [] [1,2,3] == [1,2,3] The list constructor and the empty list preserve the original list's structure and order."
+          }
+        ]
+      },
+      "manual_correct": null,
+      "response_seconds": 0.734
     },
     {
       "id": "a29",
-      "retrieval_seconds": 0.031,
+      "retrieval_seconds": 0.047,
       "retrieved": [
         {
           "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
@@ -1193,12 +1330,25 @@
         }
       ],
       "page_hit": true,
-      "error": "quota_exhausted|The daily free-generation allowance is exhausted. Try again tomorrow.",
-      "response_seconds": 0.0
+      "answer": {
+        "status": "answered",
+        "answer": "The accumulator states are [], [1], [2,1], and [3,2,1].",
+        "citations": [
+          {
+            "source_id": "1c6c27eec87358efb8a2de3c61c8fda1",
+            "document_id": "sample-Worksheet-2-Map-Filter-and-Folds",
+            "filename": "Worksheet-2-Map-Filter-and-Folds.pdf",
+            "page": 2,
+            "quote": "On [1,2,3], accumulators are [], [1], [2,1], and [3,2,1]. Prepending each next element reverses the order."
+          }
+        ]
+      },
+      "manual_correct": null,
+      "response_seconds": 0.75
     },
     {
       "id": "a30",
-      "retrieval_seconds": 0.031,
+      "retrieval_seconds": 0.094,
       "retrieved": [
         {
           "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
@@ -1226,12 +1376,25 @@
         }
       ],
       "page_hit": true,
-      "error": "quota_exhausted|The daily free-generation allowance is exhausted. Try again tomorrow.",
-      "response_seconds": 0.0
+      "answer": {
+        "status": "answered",
+        "answer": "The right fold evaluates to 2, while the left fold evaluates to \u20136.",
+        "citations": [
+          {
+            "source_id": "1c6c27eec87358efb8a2de3c61c8fda1",
+            "document_id": "sample-Worksheet-2-Map-Filter-and-Folds",
+            "filename": "Worksheet-2-Map-Filter-and-Folds.pdf",
+            "page": 2,
+            "quote": "foldr gives 4 - (2 - 0) = 2. foldl gives (0 - 4) - 2 = -6."
+          }
+        ]
+      },
+      "manual_correct": null,
+      "response_seconds": 0.859
     },
     {
       "id": "u01",
-      "retrieval_seconds": 0.016,
+      "retrieval_seconds": 0.032,
       "retrieved": [
         {
           "document": "Lecture-2-Recursion-and-Lists.pdf",
@@ -1258,8 +1421,13 @@
           "page": 2
         }
       ],
-      "error": "quota_exhausted|The daily free-generation allowance is exhausted. Try again tomorrow.",
-      "response_seconds": 0.0
+      "answer": {
+        "status": "insufficient_evidence",
+        "answer": "The provided evidence does not contain information about the course exam date.",
+        "citations": []
+      },
+      "manual_correct": null,
+      "response_seconds": 0.562
     },
     {
       "id": "u02",
@@ -1290,12 +1458,17 @@
           "page": 1
         }
       ],
-      "error": "quota_exhausted|The daily free-generation allowance is exhausted. Try again tomorrow.",
-      "response_seconds": 0.0
+      "answer": {
+        "status": "insufficient_evidence",
+        "answer": "Insufficient evidence",
+        "citations": []
+      },
+      "manual_correct": null,
+      "response_seconds": 0.657
     },
     {
       "id": "u03",
-      "retrieval_seconds": 0.031,
+      "retrieval_seconds": 0.078,
       "retrieved": [
         {
           "document": "Worksheet-1-Purity-and-Recursion.pdf",
@@ -1322,12 +1495,17 @@
           "page": 1
         }
       ],
-      "error": "quota_exhausted|The daily free-generation allowance is exhausted. Try again tomorrow.",
-      "response_seconds": 0.0
+      "answer": {
+        "status": "insufficient_evidence",
+        "answer": "Insufficient evidence",
+        "citations": []
+      },
+      "manual_correct": null,
+      "response_seconds": 0.531
     },
     {
       "id": "u04",
-      "retrieval_seconds": 0.016,
+      "retrieval_seconds": 0.094,
       "retrieved": [
         {
           "document": "Worksheet-1-Purity-and-Recursion.pdf",
@@ -1354,12 +1532,17 @@
           "page": 2
         }
       ],
-      "error": "quota_exhausted|The daily free-generation allowance is exhausted. Try again tomorrow.",
-      "response_seconds": 0.0
+      "answer": {
+        "status": "insufficient_evidence",
+        "answer": "Insufficient evidence",
+        "citations": []
+      },
+      "manual_correct": null,
+      "response_seconds": 0.531
     },
     {
       "id": "u05",
-      "retrieval_seconds": 0.031,
+      "retrieval_seconds": 0.063,
       "retrieved": [
         {
           "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
@@ -1386,12 +1569,17 @@
           "page": 2
         }
       ],
-      "error": "quota_exhausted|The daily free-generation allowance is exhausted. Try again tomorrow.",
-      "response_seconds": 0.0
+      "answer": {
+        "status": "insufficient_evidence",
+        "answer": "The provided evidence does not contain information about the required GHC version for this course.",
+        "citations": []
+      },
+      "manual_correct": null,
+      "response_seconds": 0.625
     },
     {
       "id": "u06",
-      "retrieval_seconds": 0.016,
+      "retrieval_seconds": 0.047,
       "retrieved": [
         {
           "document": "Lecture-2-Recursion-and-Lists.pdf",
@@ -1418,12 +1606,17 @@
           "page": 1
         }
       ],
-      "error": "quota_exhausted|The daily free-generation allowance is exhausted. Try again tomorrow.",
-      "response_seconds": 0.0
+      "answer": {
+        "status": "insufficient_evidence",
+        "answer": "Insufficient evidence",
+        "citations": []
+      },
+      "manual_correct": null,
+      "response_seconds": 0.547
     },
     {
       "id": "u07",
-      "retrieval_seconds": 0.016,
+      "retrieval_seconds": 0.047,
       "retrieved": [
         {
           "document": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
@@ -1450,12 +1643,17 @@
           "page": 2
         }
       ],
-      "error": "quota_exhausted|The daily free-generation allowance is exhausted. Try again tomorrow.",
-      "response_seconds": 0.0
+      "answer": {
+        "status": "insufficient_evidence",
+        "answer": "insufficient_evidence",
+        "citations": []
+      },
+      "manual_correct": null,
+      "response_seconds": 0.328
     },
     {
       "id": "u08",
-      "retrieval_seconds": 0.031,
+      "retrieval_seconds": 0.047,
       "retrieved": [
         {
           "document": "Worksheet-1-Purity-and-Recursion.pdf",
@@ -1482,12 +1680,17 @@
           "page": 2
         }
       ],
-      "error": "quota_exhausted|The daily free-generation allowance is exhausted. Try again tomorrow.",
-      "response_seconds": 0.0
+      "answer": {
+        "status": "insufficient_evidence",
+        "answer": "Insufficient evidence",
+        "citations": []
+      },
+      "manual_correct": null,
+      "response_seconds": 0.656
     },
     {
       "id": "u09",
-      "retrieval_seconds": 0.015,
+      "retrieval_seconds": 0.031,
       "retrieved": [
         {
           "document": "Worksheet-2-Map-Filter-and-Folds.pdf",
@@ -1514,12 +1717,17 @@
           "page": 2
         }
       ],
-      "error": "quota_exhausted|The daily free-generation allowance is exhausted. Try again tomorrow.",
-      "response_seconds": 0.016
+      "answer": {
+        "status": "insufficient_evidence",
+        "answer": "Insufficient evidence",
+        "citations": []
+      },
+      "manual_correct": null,
+      "response_seconds": 0.5
     },
     {
       "id": "u10",
-      "retrieval_seconds": 0.031,
+      "retrieval_seconds": 0.047,
       "retrieved": [
         {
           "document": "Lecture-1-Pure-Functions.pdf",
@@ -1546,8 +1754,13 @@
           "page": 1
         }
       ],
-      "error": "quota_exhausted|The daily free-generation allowance is exhausted. Try again tomorrow.",
-      "response_seconds": 0.0
+      "answer": {
+        "status": "insufficient_evidence",
+        "answer": "Insufficient evidence to compare measured runtime performance of Haskell and OCaml on these worksheets.",
+        "citations": []
+      },
+      "manual_correct": null,
+      "response_seconds": 0.531
     }
   ]
 }

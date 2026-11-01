@@ -1,0 +1,31 @@
+{
+  "date_utc": "2026-11-01T19:34:16.293154+00:00",
+  "method": "Focused recheck after constrained short source identifiers replaced unrestricted UUID output. Original acceptance outcomes remain unchanged.",
+  "model": "openai/gpt-oss-20b",
+  "records": [
+    {
+      "id": "a13",
+      "draft": {
+        "status": "answered",
+        "answer": "Map is a higher\u2011order function because it takes a function as its first argument and returns a new list produced by applying that function to each element. This matches the definition of a higher\u2011order function, which is a function that takes a function as an argument or returns a function as a result.",
+        "citations": [
+          {
+            "source_id": "2ebcceb48ff34a3a2ac163cc2e627d31",
+            "quote": "A higher-order function takes a function as an argument or returns a function as a result. Haskell functions are first\u2011class values: they can be passed to other functions and stored in data structures."
+          },
+          {
+            "source_id": "2ebcceb48ff34a3a2ac163cc2e627d31",
+            "quote": "map :: (a -> b) -> [a] -> [b]"
+          }
+        ]
+      },
+      "error": "The model returned an invalid supporting passage. Please retry.",
+      "seconds": 0.688
+    },
+    {
+      "id": "a18",
+      "error": "provider_quota|The model provider is rate limiting requests. Wait a minute and retry.",
+      "seconds": 13.344
+    }
+  ]
+}

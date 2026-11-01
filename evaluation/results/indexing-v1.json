@@ -1,0 +1,38 @@
+{
+  "date_utc": "2026-11-01T19:30:59.307135+00:00",
+  "platform": "nt",
+  "python": "3.12.13",
+  "embedding_model": "BAAI/bge-small-en-v1.5",
+  "threads": 1,
+  "embedding_batch": 8,
+  "condition": "Cold process, embedding files cached on disk; five samples indexed sequentially; process-tree RSS sampled every 20ms. Not a Render maximum-load measurement.",
+  "total_seconds": 8.375,
+  "sampled_peak_process_tree_rss_mib": 285.37,
+  "documents": [
+    {
+      "filename": "Lecture-1-Pure-Functions.pdf",
+      "pages": 2,
+      "seconds": 1.625
+    },
+    {
+      "filename": "Lecture-2-Recursion-and-Lists.pdf",
+      "pages": 2,
+      "seconds": 0.515
+    },
+    {
+      "filename": "Lecture-3-Higher-Order-Functions-and-Folds.pdf",
+      "pages": 2,
+      "seconds": 2.656
+    },
+    {
+      "filename": "Worksheet-1-Purity-and-Recursion.pdf",
+      "pages": 2,
+      "seconds": 1.609
+    },
+    {
+      "filename": "Worksheet-2-Map-Filter-and-Folds.pdf",
+      "pages": 2,
+      "seconds": 1.859
+    }
+  ]
+}
