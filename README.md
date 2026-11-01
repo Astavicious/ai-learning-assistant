@@ -6,7 +6,11 @@ Turn course PDFs into cited answers, revision notes, quizzes, and Anki flashcard
 
 ## Status
 
-Implementation and release validation are in progress. No public live-demo URL is verified yet. Local retrieval acceptance: **30/30 supporting pages in the top six**, dataset v1.0.0, 2026-11-01. Answer-quality and unsupported-question results are separate and require completed manual review. See [evaluation method](evaluation/README.md) and [raw retrieval results](evaluation/results/retrieval-v1.json).
+**[Open the live demo](https://ai-learning-assistant-one-sigma.vercel.app)** · [Backend health](https://ai-learning-assistant-api-1aeb.onrender.com/api/health)
+
+The frontend and backend are deployed; final live workflow validation is in progress. The staged v1 evaluation records **30/30 retrieval hits**, **27/30 supported correct answers**, and **10/10 unsupported refusals** under a Codex-assisted manual rubric review. This includes documented rate-limit retries and a focused citation-typography recheck; it is not independent human grading or an untouched single-run benchmark of the final deployed commit. Original failures remain published. See [method](evaluation/README.md), [review](evaluation/results/review-v1.json), and [raw retrieval results](evaluation/results/retrieval-v1.json).
+
+Measured locally on the original ten sample pages: 8.375 seconds to index all five PDFs with embedding files already cached, 285.37 MiB sampled peak process-tree RSS, and 0.75-second median successful model-call latency (retrieval/polling excluded; maximum 36.968 seconds including retry waits). Evaluation model calls consumed 112,153 provider-reported tokens. These are sample-workload measurements, not maximum-load or production-service guarantees. The container sample-startup check also passed under a 512 MiB cap.
 
 The 2025 prototype used Python, LangChain, Streamlit, FastAPI, Llama, and ChromaDB. Its historical 25-document/300+ interaction figures are **not results of this release**. This release uses five newly authored sample documents, ten pages total.
 

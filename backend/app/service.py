@@ -264,7 +264,7 @@ class Service:
             )
         return day
 
-    def generate(self, owner, schema, instructions, sources, history=None):
+    def generate(self, owner, schema, instructions, sources, history=None, retry_allowed=True):
         if not os.getenv("GROQ_API_KEY"):
             raise ValueError(
                 "provider_not_configured|AI generation is not configured. The operator must add a Groq API key."
@@ -335,6 +335,15 @@ class Service:
             return draft
         except APIStatusError as exc:
             logger.warning("provider_error status=%d", exc.status_code)
+            body = exc.body if isinstance(exc.body, dict) else {}
+            error = body.get("error", body)
+            category = error.get("code") if isinstance(error, dict) else None
+            if (
+                exc.status_code == 400
+                and category in ("json_validate_failed", "failed_generation")
+                and retry_allowed
+            ):
+                return self.generate(owner, schema, instructions, sources, history, retry_allowed=False)
             if exc.status_code in (401, 429):
                 self.store.execute(
                     "UPDATE usage SET tokens=MAX(0,tokens-?) WHERE owner=? AND day=?",
